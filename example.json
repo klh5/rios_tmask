@@ -1,0 +1,17 @@
+{"2017-01-13": {"input": "/media/hdd_1/test_ds/LS8_20170113_lat26lon14747_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-01-13.kea"},
+"2017-01-29": {"input": "/media/hdd_1/test_ds/LS8_20170129_lat26lon14748_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-01-29.kea"},
+"2017-02-14": {"input": "/media/hdd_1/test_ds/LS8_20170214_lat26lon14749_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-03-02.kea"},
+"2017-03-02": {"input": "/media/hdd_1/test_ds/LS8_20170302_lat26lon14749_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-03-02.kea"},
+"2017-03-18": {"input": "/media/hdd_1/test_ds/LS8_20170318_lat26lon14749_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-03-18.kea"},
+"2017-04-03": {"input": "/media/hdd_1/test_ds/LS8_20170403_lat26lon14749_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-04-03.kea"},
+"2017-04-19": {"input": "/media/hdd_1/test_ds/LS8_20170419_lat26lon14749_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-04-19.kea"},
+"2017-05-05": {"input": "/media/hdd_1/test_ds/LS8_20170505_lat26lon14749_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-05-05.kea"},
+"2017-05-21": {"input": "/media/hdd_1/test_ds/LS8_20170521_lat26lon14747_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-05-21.kea"},
+"2017-06-06": {"input": "/media/hdd_1/test_ds/LS8_20170606_lat26lon14746_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-06-06.kea"},
+"2017-06-22": {"input": "/media/hdd_1/test_ds/LS8_20170622_lat26lon14746_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-06-22.kea"},
+"2017-07-08": {"input": "/media/hdd_1/test_ds/LS8_20170708_lat26lon14748_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-07-08.kea"},
+"2017-07-24": {"input": "/media/hdd_1/test_ds/LS8_20170724_lat26lon14748_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-07-24.kea"},
+"2017-08-09": {"input": "/media/hdd_1/test_ds/LS8_20170809_lat26lon14747_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-08-09.kea"},
+"2017-08-25": {"input": "/media/hdd_1/test_ds/LS8_20170825_lat26lon14747_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-08-25.kea"},
+"2017-09-10": {"input": "/media/hdd_1/test_ds/LS8_20170910_lat26lon14748_r78p93_vmsk_mclds_topshad_rad_toa_cropped.kea", "output": "2017-09-10.kea"}
+}
