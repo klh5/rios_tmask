@@ -1,5 +1,6 @@
 import json
 import sys
+from rios import fileinfo
 from rios import applier
 from datetime import datetime
 from removeoutliers import RLMRemoveOutliers
@@ -13,6 +14,7 @@ def gen_tmask(info, inputs, outputs, other_args):
     to keep = 0."""
     
     dates = other_args.dates
+    nodata = other_args.nodata
     
     # Set up default output
     # Assumes all pixels are clear
@@ -24,12 +26,12 @@ def gen_tmask(info, inputs, outputs, other_args):
         
     model_inputs = np.hstack((other_args.dates, green_vals, nir_vals, swir1_vals))
     
-    drop_indices = np.where(np.any(model_inputs == 0, axis=1))
+    drop_indices = np.where(np.any(model_inputs == nodata, axis=1))
     
     drop_indices = np.array(drop_indices).reshape(-1)
 
     # Remove any rows where all band values are 0
-    model_inputs =  model_inputs[np.all(model_inputs != 0, axis=1)]
+    model_inputs =  model_inputs[np.all(model_inputs != nodata, axis=1)]
 
     # Need a minimum of 12 observations
     if(len(model_inputs) >= 12):
@@ -112,6 +114,12 @@ def run_tmask(json_fp, output_driver='KEA', num_processes=1, green_band=2, nir_b
     app.setJobManagerType('multiprocessing')
     app.setNumThreads(num_processes)
     
+    # Open first image in list to use as a template
+    template_image = fileinfo.ImageInfo(infiles.images[0])
+    
+    # Get no data value
+    nodata = template_image.nodataval[0]
+    
     # Need to tell the applier to only use the specified bands 
     app.selectInputImageLayers([green_band, nir_band, swir_band])
     
@@ -122,6 +130,7 @@ def run_tmask(json_fp, output_driver='KEA', num_processes=1, green_band=2, nir_b
     other_args = applier.OtherInputs()
     other_args.dates = dates
     other_args.threshold = threshold
+    other_args.nodata = nodata
     
     try:
         applier.apply(gen_tmask, infiles, outfiles, otherArgs=other_args, controls=app)
@@ -129,4 +138,4 @@ def run_tmask(json_fp, output_driver='KEA', num_processes=1, green_band=2, nir_b
         print('There was an error processing the images: {}'.format(e))
         print('Do all images in the JSON file exist?')
 
-run_tmask(json_fp='example.json', num_processes=4)
+run_tmask(json_fp='example.json', num_processes=6, green_band=3, nir_band=5, swir_band=6)
