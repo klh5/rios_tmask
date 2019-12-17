@@ -56,12 +56,12 @@ def run_tmask(json_fp, output_driver='KEA', num_processes=1, green_band=2, nir_b
     Opening/closing of files, generation of blocks and use of multiprocessing is 
     all handled by RIOS.
     
-    Files should already have been masked using Fmask.
+    A minimum of 12 observations is required to create the masks.
+    
     
     json_fp:       Path to JSON file which provides a dictionary where for each
                    date, an input file name and an output file name are provided.
     output_driver: Short driver name for GDAL, e.g. KEA, GTiff.
-    bands:         List of GDAL band numbers to use in the analysis, e.g. [2, 5, 7].
     num_processes: Number of concurrent processes to use.
     green_band:    GDAL band number for green spectral band. Defaults to 2.
     nir_band:      GDAL band number for NIR spectral band. Defaults to 4.
