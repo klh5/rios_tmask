@@ -12,6 +12,6 @@ The input is a JSON file containing an input and output file path for each date,
 
 See also the included file example.json. **Images should be listed in date order**.
 
-Tmask uses three input bands: Green, NIR, and SWIR. For Landsat 7, these are bands 2, 4, and 5 and the script will default to these bands. For other satellites, the appropriate bands can be input as arguments.
+Tmask uses three input bands: Green, NIR, and SWIR. For Landsat 7, these are bands 2, 4, and 5 and the script will default to these bands. For other satellites, the appropriate bands can be input as arguments (GDAL band numbering).
 
 
